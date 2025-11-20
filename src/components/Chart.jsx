@@ -6,10 +6,9 @@ import {
 	YAxis,
 	CartesianGrid,
 	Tooltip,
-	ResponsiveContainer,
+    ResponsiveContainer,
 } from "recharts";
 
-// Les données par défaut (peuvent être remplacées via props)
 const defaultData = [
 	{ x: 1, y: 2 },
 	{ x: 2, y: 6 },
@@ -23,7 +22,10 @@ const defaultData = [
 	{ x: 10, y: 5 },
 ];
 
-export default function Chart({ title = "Graphique", data = defaultData }) {
+export default function Chart({
+	title = "Graphique (avec @mui/x-charts)",
+	data = defaultData,
+}) {
 	return (
 		<Paper sx={{ p: 3 }}>
 			<Typography variant="h6" sx={{ mb: 2 }}>
@@ -31,27 +33,27 @@ export default function Chart({ title = "Graphique", data = defaultData }) {
 			</Typography>
 
 			<Box sx={{ height: 300 }}>
-				<ResponsiveContainer width="100%" height="100%">
-					<LineChart data={data}>
-						<CartesianGrid strokeDasharray="3 3" />
-						<XAxis dataKey="x" />
-						<YAxis />
-						<Tooltip />
-						<Line
-							type="monotone"
-							dataKey="y"
-							stroke="#00bcd4"
-							strokeWidth={3}
-							dot={{
-								fill: "#00bcd4",
-								r: 5,
-								stroke: "#fff",
-								strokeWidth: 2,
-							}}
-							activeDot={{ r: 8 }}
-						/>
-					</LineChart>
-				</ResponsiveContainer>
+                <ResponsiveContainer width="20%" height="100%">
+				<LineChart data={data}>
+					<CartesianGrid strokeDasharray="3 3" />
+					<XAxis dataKey="x" />
+					<YAxis />
+					<Tooltip />
+					<Line
+						type="monotone"
+						dataKey="y"
+						stroke="#00bcd4"
+						strokeWidth={3}
+						dot={{
+							fill: "#00bcd4",
+							r: 5,
+							stroke: "#fff",
+							strokeWidth: 2,
+						}}
+						activeDot={{ r: 8 }}
+					/>
+				</LineChart>
+                </ResponsiveContainer>
 			</Box>
 		</Paper>
 	);

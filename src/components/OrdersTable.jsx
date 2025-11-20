@@ -5,7 +5,7 @@ import {
 	TableContainer,
 	TableHead,
 	TableRow,
-	Typography,
+	Paper,
 } from "@mui/material";
 
 const rows = [
@@ -17,7 +17,7 @@ const rows = [
 
 export default function OrdersTable() {
 	return (
-		<TableContainer>
+		<TableContainer component={Paper} sx={{ mt: '30px', p: 2 }}>
 			<Table>
 				<TableHead>
 					<TableRow>
