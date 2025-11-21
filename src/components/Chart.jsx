@@ -30,7 +30,7 @@ export default function Chart({
 
 
 			<Box sx={{ height: 300 }}>
-						<Typography variant="h6" sx={{ mb: 2, ml: 3 }}>
+						<Typography variant="h6" sx={{ mb: 2, ml: 5 }}>
 				{title}
 			</Typography>
                 <ResponsiveContainer width="20%" height="100%">
