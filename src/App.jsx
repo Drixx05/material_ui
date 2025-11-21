@@ -36,11 +36,9 @@ export default function App() {
 					<StatCard icon={People} value="300" label="Clients" />
 					<StatCard icon={Message} value="5" label="Messages" />
 				</Box>
-				<Box sx={{ display: "flex", flexDirection: "column" }}>
 					<Chart data={chartData} />
-				</Box>
 
-				<Box sx={{ width: "80%", mt: '30px', p: 3 }}>
+				<Box sx={{ width: "95%", mt: '100px', ml : '50px', mb: 5 }}>
 					<Typography variant="h6" sx={{ mb: 2 }}>
 						Dernières commandes
 					</Typography>

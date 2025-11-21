@@ -27,12 +27,12 @@ export default function Chart({
 	data = defaultData,
 }) {
 	return (
-		<Paper sx={{ p: 3 }}>
-			<Typography variant="h6" sx={{ mb: 2 }}>
-				{title}
-			</Typography>
+
 
 			<Box sx={{ height: 300 }}>
+						<Typography variant="h6" sx={{ mb: 2, ml: 3 }}>
+				{title}
+			</Typography>
                 <ResponsiveContainer width="20%" height="100%">
 				<LineChart data={data}>
 					<CartesianGrid strokeDasharray="3 3" />
@@ -55,6 +55,5 @@ export default function Chart({
 				</LineChart>
                 </ResponsiveContainer>
 			</Box>
-		</Paper>
 	);
 }
